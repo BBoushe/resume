@@ -1,0 +1,414 @@
+%-------------------------
+% Resume in Latex
+% Author : Alek Pachemski
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+
+% These are for the About Me section remove if not using it%
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\input{glyphtounicode}
+
+% For href visibility
+\usepackage{xcolor}
+\definecolor{denim}{RGB}{21,96,189}
+\usepackage{hyperref}
+
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=denim,
+    linkcolor=denim,
+    pdfborderstyle={/S/U/W 5} % Underlines links instead of boxing them; adjust the width (W) as needed
+}
+% Change the horizontal separator color
+\renewcommand{\titlerule}{\color{denim} \hrule width \linewidth height 1.25pt}
+
+%---------- FONT OPTIONS ----------
+\usepackage{charter}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{0.8in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeInlineItem}[1]{
+  {\item[]\small \textit{#1} \vspace{-1pt}}
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeEducationHeadingOneLess}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumePaperHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\linksymbol}{$\hookleftarrow$}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Alek Pachemski} \\ \vspace{12pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:+38970278698}{\textbf{+389 70 278 698}}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:alek.pach0@gmail.com}{\textbf{alek.pach0@gmail.com}}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/alek-pachemski}{\textbf{LinkedIn/in/alek-pachemski}}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/BBoushe}{\textbf{GitHub/BBoushe}}
+\end{center}
+
+
+%--------About Me-----------
+
+\begin{minipage}{0.23\textwidth} % Adjust the width of the image column as needed
+\includegraphics[width=\linewidth,frame]{profesionalPicture.jpg} % Add frame and adjust path
+\end{minipage}%
+\hfill % Adds horizontal space between the image and the text
+\begin{minipage}{0.75\textwidth} % Adjust the width of the text column as needed
+  \section*{About Me}
+  As a Software Engineering student, I have built extensive experience in web and software development, creating intuitive digital products. My projects include a published Firefox extension, a real-time Kanban platform with Next.js and Firebase, and a Discord bot. Success in international hackathons highlights my collaboration, innovation, and ability to deliver under pressure.
+
+Beyond tech, rugby and powerlifting have shaped my discipline, teamwork, and resilience — traits that enhance my professional life.
+\end{minipage}
+    
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    
+    \resumeEducationHeadingOneLess
+      {B.Sc. in Software Engineering and Information Systems}{Skopje, North Macedonia}
+      {FINKI at Ss. Cyril and Methodius University of Skopje}{2020 \textbf{--} 2025}
+    \resumeSubheading
+      {"Orce Nikolov" High School
+      % \normalfont{(Admission rate: 0.85\%)}
+      }{Skopje, North Macedonia}
+      {Bilingual High School Diploma}{Sep 2016 \textbf{--} Jun 2020}
+    
+  \resumeSubHeadingListEnd
+
+
+%----------- WORK EXPERIENCE -----------
+
+\section{Work Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+ \resumeSubheading
+       {Piping Rock Club}{New York, USA}
+       {Service Industry Professional | Work and Travel Program}{Jun 2022 \textbf{--} Oct 2022}
+         \resumeItemListStart
+             \resumeItem{Worked over 100 hours each week, showing a strong commitment to the job}
+             \resumeItem{Entrusted by management as a key organizer for major events due to demonstrated reliability and leadership.}
+         \resumeItemListEnd
+    
+    \resumeSubheading
+      {GetOut.mk}{Skopje, North Macedonia}
+      {Product Design and Business Development Associate | IT Startup}{May 2020 \textbf{--} Aug 2020}
+        \resumeItemListStart
+            \resumeItem{Designed product visuals for the B2B platform, improving user engagement and interface quality}
+            \resumeItem{Managed client outreach and contract negotiations, expanding business partnerships}
+        \resumeItemListEnd
+        
+  \resumeSubHeadingListEnd
+
+%--------------Projects-----------------------
+
+\section{Projects}
+    \vspace{2pt}
+    \resumeSubHeadingListStart
+    
+        \resumeProjectSubheading
+        {Zemi - Browser Extension}{\href{\detokenize{https://addons.mozilla.org/en-US/firefox/addon/zemi-bulk-image-downloader/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search}}{\textbf{Add-ons Store \linksymbol}} $ | $ \href{https://github.com/BBoushe/zemi}{\textbf{GitHub \linksymbol}}}
+            \resumeItemListStart
+            \resumeItem{Bulk image downloader for messaging boards with smart hashing, image filtering, and custom download locations. Available on the Firefox add-ons store.}
+            \resumeInlineItem{\textbf{Technologies:} \textit{JavaScript, Firefox Add-ons API}}
+            \resumeItemListEnd
+
+        \resumeProjectSubheading
+        {Kanban Task Management Platform}{\href{https://github.com/BBoushe/kanban-task-management}{\textbf{GitHub \linksymbol}}}
+            \resumeItemListStart
+                \resumeItem{Independently designed and built a fully-functional Trello-like real-time Kanban board with drag-and-drop, authentication, persistent state management and CRUD operations, detailed card views and commenting functionality.}
+                \resumeInlineItem{\textbf{Technologies:} \textit{Next.js, Firebase, TypeScript}}
+            \resumeItemListEnd
+
+        \resumeProjectSubheading
+        {Discord Bot}{\href{https://github.com/BBoushe/CloudGardenDB}{\textbf{GitHub \linksymbol}}}
+            \resumeItemListStart
+            \resumeItem{As part of a larger IoT plant care project, created a Discord bot that sends real-time push notifications for watering schedules, syncs with a remote server via API calls.}
+            \resumeInlineItem{\textbf{Technologies:} \textit{Java (JDA), API Integration}}
+            \resumeItemListEnd
+
+        \resumeProjectSubheading
+        {Real-Time Diabetes Prediction Pipeline with Apache Spark}{\href{https://github.com/BBoushe/spark-project}{\textbf{GitHub \linksymbol}}}
+        \resumeItemListStart
+            \resumeItem{Deployed a real-time ML pipeline that processes live health data streams using Apache Spark Structured Streaming, ingests data via Kafka, and applies optimized classification models for diabetes prediction.}
+            \resumeInlineItem{\textbf{Technologies:} \textit{Python, Apache Spark, Kafka, Machine Learning}}
+        \resumeItemListEnd
+        
+    \resumeItemListEnd
+
+
+%------------------ PAPERS -------------------
+
+\section{Publications}
+    \vspace{2pt}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Consumer Behavior Towards Eco-friendly products in the Western Balkans}{}
+        {Operational Research Paper}{Nov 2024 \textbf{--} Jan 2025}
+            \resumeItemListStart
+                \resumeItem{Pre-print paper accepted for presentation at the \href{https://im-pmf.weebly.com/osmi-seminar-matematika-i-primeni.html}{\textbf{Mathematics and Applications Conference} \linksymbol} (March 2025).}
+                \resumeItem{Developed unsupervised clustering models using Eurostat socioeconomic data to identify and analyze groupings among Western Balkan countries, providing actionable policy insights based on quantitative results.}
+                \resumeItem{Collaborated with professor \href{https://www.researchgate.net/profile/Violeta-Cvetkoska}{\textbf{Violeta Cvetkoska} \linksymbol} from the Faculty of Economics}
+            \resumeItemListEnd
+
+    
+        \resumeSubheading
+        {Enhancing Music Genre Classification: A Divide and Conquer Strategy}{}
+        {Machine Learning Paper}{Aug 2023 \textbf{--} Feb 2024}
+            \resumeItemListStart
+              \resumeItem{Published at the \href{https://etai.org.mk/}{\textbf{ETAI Conference} \linksymbol} (Sept 2024), DOI: \href{https://doi.org/10.5281/zenodo.14054137}{\textbf{10.5281/zenodo.14054137}\linksymbol}}
+               \resumeItem{Developed a classical machine learning model for musical genre classification that leverages a layered model architecture for improved accuracy}
+               \resumeItem{Collaborated with a student and professor \href{https://feit.ukim.edu.mk/staff/hristijan-gjoreski/}{\textbf{Hristijan Gjoreski} \linksymbol} from the Faculty of Electrical Engineering}
+            \resumeItemListEnd
+    \resumeItemListEnd
+
+
+
+%----------- SKILLS -----------
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Programming: }{JavaScript, TypeScript, Node.js, Swift, C, C++, Java, Python, MySQL, SQLite} \\
+
+        \textbf{Frameworks:}{Next.js, Nest.js, SwiftUI, Bootstrap, Django, Spark} \\
+        
+        \textbf{Technologies:}{Git, Docker, Unix, Bash, UML, YouTrack, Jira} \\
+        
+        \textbf{Languages:}{ Macedonian (Native), English (Professional), German (Elementary)} \\
+    }}
+  \resumeSubHeadingListEnd
+%----------- AWARDS & ACHIEVEMENTS -----------
+
+%\section{Awards \& Achievements}
+\section{Awards \& Achievements}
+  \vspace{2pt}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Blase Pascal Quantum Challenge - Finalist}{\href{https://github.com/VladimirK909/quantum-realtime-algorithm-for-wildfire-containment}{GitHub \linksymbol}}
+        {Month Long Quantum AI Hackathon}{Feb 2025 - Ongoing}
+            \resumeItemListStart
+               \resumeItem{Selected as one of the top 15 teams from over 800 participants in an international quantum AI competition organized by \href{https://www.agorize.com/en/challenges/blaisepascalquantumchallenge2025}{\textbf{Pasqal} \linksymbol} to develop sustainable solutions aligned with the UN Sustainable Development Goals (SDGs). The team advances to the pitch phase on 11th March. Final phase on 26th March.}
+               \resumeItem{Collaborated in an interdisciplinary team of 6 to develop a quantum-enhanced real-time wildfire containment algorithm, leveraging neural network-based predictions and QUBO-based optimization for efficient resource allocation.}
+            \resumeItemListEnd
+            
+        \resumeSubheading
+        {T.I.M.E.S Tournament for Management and Engineering Skills}{}
+        {\textbf{First Place} at National Level}{Jan - June 2024}
+            \resumeItemListStart
+              \resumeItem{A student-level case study competition organized by \href{https://www.linkedin.com/posts/mikrosam-doo_mikrosammacedonia-times-studentcompetition-activity-7144280476889890816-YHsy?utm_source=share&utm_medium=member_desktop}{\textbf{MIKROSAM} \linksymbol} and ESTIEM for Industrial Engineering and Management}
+               \resumeItem{Worked within a limited time-frame to analyze industrial line problems and provide optimal solutions}
+               \resumeItem{Our team advanced to Izmir, Turkey for the semi-finals where we competed with teams from all over the world and placed \textbf{6th}}
+            \resumeItemListEnd
+            
+        \resumeSubheading
+            {UNIJA Challenge}{}
+            {\textbf{Second Place} at National Level}{Nov 2023}
+            \resumeItemListStart
+                \resumeItem{A student-level software engineering competition for the development of a mobile application organized by \href{https://www.linkedin.com/posts/unijaskopje_unijachallenge-congratswinners-activity-7133105256846008320-bDFo?utm_source=share&utm_medium=member_desktop}{\textbf{UNIJA} \linksymbol}}
+                \resumeItem{Designed the system architecture and collaborated with the other team members to develop the complete SRS document for an accounting mobile application}
+            \resumeItemListEnd
+            
+        \resumeSubheading
+        {TUM.ai AI4SocialGood Hackathon}{}
+        {48H Hackaton by Technical University Munich}{Apr 2022}
+            \resumeItemListStart
+            \resumeItem{Worked with students from Europe to develop a solution for combating "doomscrolling"}
+            \resumeItemListEnd
+    \resumeItemListEnd
+
+
+%----------- RELEVANT COURSEWORK -----------
+
+%\section{Relevant Coursework}
+  %\vspace{2pt}
+ % \resumeSubHeadingListStart
+  %  \small{\item{
+     %   \textbf{Major coursework:}{ Calculus I-II, Matrix Theory, Differential Equations, Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering} \\ \vspace{3pt}
+        
+     %   \textbf{Minor coursework:}{ Discrete Computational Structures, Introduction to Object-Oriented Programming, Data Structures and Algorithms}
+  % }}
+ % \resumeSubHeadingListEnd
+
+
+
+%----------- CERTIFICATES -----------
+
+% \section{Certificates}
+  % \resumeSubHeadingListStart
+    
+    % \resumeOrganizationHeading
+      % {Procter \& Gamble VIA Certificate Program}{Feb 2022}{Business Skills, Data and Digital Skills, Project Management and Personal Productivity}
+    
+  % \resumeSubHeadingListEnd
+
+
+
+%----------- ORGANIZATIONS -----------
+
+% \section{Organizations}
+  % \resumeSubHeadingListStart
+    
+    % \resumeOrganizationHeading
+      % {Institute of Electrical and Electronics Engineers (IEEE)}{Feb 2022 -- Present}{Student Member}
+    
+  % \resumeSubHeadingListEnd
+
+
+
+%----------- HOBBIES -----------
+
+ % \section{Hobbies}
+ %   \resumeSubHeadingListStart
+ %     \small{\item{Powerlifting, Rugby, Gaming, Anime}}
+ %   \resumeSubHeadingListEnd
+
+
+
+%----------- REFERENCES -----------
+
+% \section{References}
+  % \resumeSubHeadingListStart
+    
+  % \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
